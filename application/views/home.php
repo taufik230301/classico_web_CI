@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
     <div class="p-4">
 
-        <h1>Aplikasi Data Mahasiswa Baru</h1>
+        <h1>Aplikasi Data Siswa</h1>
         <table class="table">
             <thead>
                 <tr>
@@ -46,6 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php } ?>
             </tbody>
         </table>
+        <h1> kevin juan</h2>
         <!-- Optional JavaScript; choose one of the two! -->
 
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
