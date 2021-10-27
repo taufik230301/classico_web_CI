@@ -12,4 +12,5 @@ class Model_mahasiswa extends CI_Model
     public function get_mahasiswa(){
         return $this->db->get('data_mahasiswa')->result_array();
     }
+    
 }

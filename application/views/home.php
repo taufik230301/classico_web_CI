@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
     <div class="p-4">
 
-        <h1>Aplikasi Data Mahasiswa!</h1>
+        <h1>Aplikasi Data Mahasiswa Baru</h1>
         <table class="table">
             <thead>
                 <tr>
