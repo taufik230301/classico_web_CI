@@ -17,7 +17,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body>
     <div class="p-4">
-
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah">
+            Tambah Data Mahasiswa
+        </button>
         <h1>Aplikasi Data Mahasiswa Baru</h1>
         <table class="table">
             <thead>
@@ -46,10 +49,59 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php } ?>
             </tbody>
         </table>
+        <h2>Taufiiqul Hakim</h2>
+        <!-- Modal -->
+        <div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="<?= base_url(); ?>index.php/mahasiswa/tambah" method="POST">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">NIM</label>
+                                <input type="text" name="nim" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Masukan NIM">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Nama</label>
+                                <input type="text" name="nama" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Masukan Nama">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">NO HP</label>
+                                <input type="text" name="no_hp" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Masukan No HP">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Jurusan</label>
+                                <input type="text" name="jurusan" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Masukan Jurusan">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">IPK</label>
+                                <input type="text" name="ipk" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Masukan IPK">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Optional JavaScript; choose one of the two! -->
 
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
         <script src="<?=base_url('assets')?>/js/bootstrap.js">
         </script>
 
