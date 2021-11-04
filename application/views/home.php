@@ -62,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="<?= base_url(); ?>index.php/mahasiswa/tambah" method="POST">
+                        <form action="<?= base_url(); ?>mahasiswa/tambah" method="POST">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">NIM</label>
                                 <input type="text" name="nim" class="form-control" id="exampleInputEmail1"
