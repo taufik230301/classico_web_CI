@@ -33,11 +33,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <th scope="col">IPK</th>
                 </tr>
             </thead>
-            <tbody>
-                <?php
+            <?php
         $no = 1;
         foreach($mahasiswa as $u){
         ?>
+            <tbody>
                 <tr>
                     <th scope="row"><?= $no++; ?></th>
                     <td><?= $u['nim']?></td>
@@ -46,8 +46,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <td><?= $u['jurusan']?></td>
                     <td><?= $u['ipk']?></td>
                 </tr>
-                <?php } ?>
             </tbody>
+            <?php } ?>
         </table>
         <h2>Taufiiqul Hakim</h2>
         <!-- Modal -->
@@ -87,7 +87,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">IPK</label>
-                                <input type="text" name="ipk" class="form-control" id="exampleInputPassword1"
+                                <input type="number" name="ipk" step="0.1" min="0" max="4" class="form-control" id="exampleInputPassword1"
                                     placeholder="Masukan IPK">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
