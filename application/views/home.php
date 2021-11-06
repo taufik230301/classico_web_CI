@@ -31,6 +31,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <th scope="col">No HP</th>
                     <th scope="col">Jurusan</th>
                     <th scope="col">IPK</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
                 </tr>
             </thead>
             <?php
@@ -45,6 +47,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <td><?= $u['no_hp']?></td>
                     <td><?= $u['jurusan']?></td>
                     <td><?= $u['ipk']?></td>
+                    <td><a role="button" class="btn btn-primary" data-toggle="modal" data-target="#edit<?=$u['id']?>">
+                            Edit
+                        </a></td>
+                    <td><a role="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Delete
+                        </a></td>
                 </tr>
             </tbody>
             <?php } ?>
@@ -87,8 +95,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">IPK</label>
-                                <input type="number" name="ipk" step="0.1" min="0" max="4" class="form-control" id="exampleInputPassword1"
-                                    placeholder="Masukan IPK">
+                                <input type="number" name="ipk" step="0.1" min="0" max="4" class="form-control"
+                                    id="exampleInputPassword1" placeholder="Masukan IPK">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
