@@ -56,13 +56,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Form Tambah</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="<?= base_url(); ?>index.php/mahasiswa/tambah" method="POST">
+                        <form action="<?= base_url(); ?>mahasiswa/tambah" method="POST">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">NIM</label>
                                 <input type="text" name="nim" class="form-control" id="exampleInputEmail1"
