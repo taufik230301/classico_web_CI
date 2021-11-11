@@ -18,5 +18,15 @@ class Model_mahasiswa extends CI_Model
         
     }
 
+    public function edit_mahasiswa($data, $id){
+        $this->db->where('id', $id);
+        $this->db->update('data_mahasiswa',$data);
+        return TRUE;
+    }
+
+    public function hapus_mahasiswa($id){
+        return $this->db->delete('data_mahasiswa', array('id'=> $id));
+    }
+
     
 }

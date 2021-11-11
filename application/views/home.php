@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?=base_url('assets')?>/css/bootstrap.css">
-
+    
     <title>Aplikasi Data Mahasiwa</title>
 </head>
 
@@ -50,11 +50,59 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <td><a role="button" class="btn btn-primary" data-toggle="modal" data-target="#edit<?=$u['id']?>">
                             Edit
                         </a></td>
-                    <td><a role="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <td><a href="<?= base_url()?>mahasiswa/hapus/<?= $u['id']?>" class="btn btn-danger" type="button"  onClick="return confirm('Apakah Anda Yakin?')">
                             Delete
                         </a></td>
                 </tr>
             </tbody>
+            <!-- Modal -->
+            <div class="modal fade" id="edit<?=$u['id']?>" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Form Edit</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="<?= base_url(); ?>mahasiswa/edit" method="POST">
+                                <input type="hidden" name="id" value="<?= $u['id'] ?>">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">NIM</label>
+                                    <input type="text" name="nim" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="Masukan NIM" value="<?= $u['nim'] ?>">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                        anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Nama</label>
+                                    <input type="text" name="nama" class="form-control" id="exampleInputPassword1"
+                                        placeholder="Masukan Nama" value="<?= $u['nama'] ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">NO HP</label>
+                                    <input type="text" name="no_hp" class="form-control" id="exampleInputPassword1"
+                                        placeholder="Masukan No HP" value="<?= $u['no_hp'] ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Jurusan</label>
+                                    <input type="text" name="jurusan" class="form-control" id="exampleInputPassword1"
+                                        placeholder="Masukan Jurusan" value="<?= $u['jurusan'] ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">IPK</label>
+                                    <input type="number" name="ipk" step="0.1" min="0" max="4" class="form-control"
+                                        id="exampleInputPassword1" placeholder="Masukan IPK" value="<?= $u['ipk'] ?>">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Optional JavaScript; choose one of the two! -->
             <?php } ?>
         </table>
         <h2>Taufiiqul Hakim</h2>
